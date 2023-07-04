@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Questrial&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+}
+
+.container {
+  width: 300px;
+  box-shadow: 0 0 30px -10px #ff6e4d;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.screen {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 110, 77, 0.3);
+  user-select: none;
+  background-color: rgba(17, 17, 17, 0.7);
+}
+
+.calculated {
+  flex-grow: 1;
+  font-size: 0.5em;
+  word-break: break-word;
+}
+
+.hero {
+  transition: font-size 0.3s linear;
+  font-size: 1em;
+  will-change: font-size;
+  white-space: nowrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hero::-webkit-scrollbar {
+  width: 0;
+  height: 3px;
+  background: #000;
+}
+
+.hero::-webkit-scrollbar-thumb {
+  background: rgba(255, 110, 77, 0.7);
+  border-radius: 50%;
+}
+
+.keys-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.key {
+  background-color: unset;
+  border: unset;
+  outline: unset;
+  font-size: inherit;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+.key:hover {
+  color: #ff6e4d;
+}
+.key.function,
+.key.delete {
+  color: #ff6e4d;
+  font-size: 35px;
+}
+.key.function:hover,
+.key.equals:hover,
+.key.ac:hover,
+.key.delete:hover {
+  box-shadow: inset 0 0 20px -5px #ff6e4d;
+}
+.key.ac {
+  grid-column: 1 / span 2;
+  color: #ff6e4d;
+  /* background-color: #ff6e4d; */
+  /* color: #fff; */
+}
+
+.key.equals {
+  grid-column: 3 / span 2;
+  color: #ff6e4d;
+  /* background-color: #ff6e4d; */
+  /* color: #fff; */
+}
